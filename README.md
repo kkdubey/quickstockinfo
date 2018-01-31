@@ -4,28 +4,6 @@
 A startup **Angular 5 / ASP.NET Core 2.0** (cross-platform ) **project template** with an end-to-end login, user and role management implementation.
 As well as other common functionalities for **Quick Application Development**.
 
-[FOLLOW ME](https://twitter.com/kommand) on twitter for important updates
-
-###### NOTE: Please post support related topics in the [help & support forum](https://www.ebenmonney.com/forum/?view=forum&id=14). For bug reports open an [issue on github](https://github.com/emonney/QuickStockInfo/issues). 
-
-For the older asp.net core 1.x version: [Download](https://github.com/emonney/QuickStockInfo-VSIX/releases/tag/v1.5")
-
-[live demo](http://QuickStockInfo.ebenmonney.com) / [downloadable demo](https://github.com/emonney/tempa/raw/master/QuickStockInfo-PublishOutput.zip)
-
-[![QuickStockInfo Demo](https://github.com/emonney/QuickStockInfo/blob/9b122b7f3c38121699d3ec41b700474e192abe37/QuickStockInfo.gif?raw=true)](https://www.youtube.com/watch?v=Wuh7NIZ96jA)
-
-___
-#### INTRODUCING QuickStockInfo PRO
-*   All standard/free features
-*   IdentityServer4
-*   Angular CLI
-*   Angular Material
-*   Dedicated Email Support
-
-[Get PRO Version](https://www.ebenmonney.com/product/QuickStockInfo-pro) | [Live Demo](http://QuickStockInfo-pro.ebenmonney.com/)
-___
-
-
 
 ## This application consists of:
 
@@ -109,7 +87,7 @@ LOGIN WITH USERNAME OR EMAIL ADDRESS
 
 ## Contribution
 
-QuickStockInfo is actively maintained by [Ebenezer Monney](https://github.com/emonney) on [GitHub](https://github.com/emonney/QuickStockInfo). You can support it by
+QuickStockInfo is actively maintained by [Komal Dubey](https://github.com/emonney) on [GitHub](https://github.com/emonney/QuickStockInfo). You can support it by
 *   Submitting your changes/improvements/features using pull requests
 *   Suggesting ideas or areas of improvements
 *   Encouraging the developers by rating it/starring it

@@ -1,15 +1,16 @@
 ﻿// ======================================
-// Author: Ebenezer Monney
-// Email:  info@ebenmonney.com
-// Copyright (c) 2017 www.ebenmonney.com
+// Author: Komal Dubey
+// Email:  kkdubey12@gmail.com
 // 
-// ==> Gun4Hire: contact@ebenmonney.com
+// 
+
 // ======================================
 
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { LoginComponent } from "./components/login/login.component";
+import { RegisterComponent } from "./components/register/register.component";
 import { HomeComponent } from "./components/home/home.component";
 import { CustomersComponent } from "./components/customers/customers.component";
 import { ProductsComponent } from "./components/products/products.component";
@@ -25,8 +26,9 @@ import { AuthGuard } from './services/auth-guard.service';
 @NgModule({
     imports: [
         RouterModule.forRoot([
-            { path: "", component: HomeComponent, canActivate: [AuthGuard], data: { title: "Home" } },
+            { path: "", component: HomeComponent, data: { title: "Home" } },
             { path: "login", component: LoginComponent, data: { title: "Login" } },
+            { path: "register", component: RegisterComponent, data: { title: "Register" } },
             { path: "customers", component: CustomersComponent, canActivate: [AuthGuard], data: { title: "Customers" } },
             { path: "products", component: ProductsComponent, canActivate: [AuthGuard], data: { title: "Products" } },
             { path: "orders", component: OrdersComponent, canActivate: [AuthGuard], data: { title: "Orders" } },

@@ -1,9 +1,9 @@
 ﻿// ======================================
-// Author: Ebenezer Monney
-// Email:  info@ebenmonney.com
-// Copyright (c) 2017 www.ebenmonney.com
+// Author: Komal Dubey
+// Email:  kkdubey12@gmail.com
 // 
-// ==> Gun4Hire: contact@ebenmonney.com
+// 
+
 // ======================================
 
 import { Injectable } from '@angular/core';
@@ -87,6 +87,9 @@ export class AccountService {
         return this.accountEndpoint.getNewUserEndpoint<User>(user);
     }
 
+    selfUserRegister(user: UserEdit) {
+        return this.accountEndpoint.getSelfUserRegisterEndpoint<User>(user);
+    }
 
     getUserPreferences() {
         return this.accountEndpoint.getUserPreferencesEndpoint<string>();

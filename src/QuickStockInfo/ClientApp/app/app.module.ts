@@ -1,9 +1,9 @@
 // ======================================
-// Author: Ebenezer Monney
-// Email:  info@ebenmonney.com
-// Copyright (c) 2017 www.ebenmonney.com
+// Author: Komal Dubey
+// Email:  kkdubey12@gmail.com
 // 
-// ==> Gun4Hire: contact@ebenmonney.com
+// 
+
 // ======================================
 
 import { NgModule, ErrorHandler } from "@angular/core";
@@ -48,6 +48,7 @@ import { GroupByPipe } from './pipes/group-by.pipe';
 
 import { AppComponent } from "./components/app.component";
 import { LoginComponent } from "./components/login/login.component";
+import { RegisterComponent } from "./components/register/register.component";
 import { HomeComponent } from "./components/home/home.component";
 import { CustomersComponent } from "./components/customers/customers.component";
 import { ProductsComponent } from "./components/products/products.component";
@@ -66,6 +67,7 @@ import { UserPreferencesComponent } from "./components/controls/user-preferences
 import { UsersManagementComponent } from "./components/controls/users-management.component";
 import { RolesManagementComponent } from "./components/controls/roles-management.component";
 import { RoleEditorComponent } from "./components/controls/role-editor.component";
+import { SocialLoginComponent } from "./components/social-login/social-login.component";
 
 
 
@@ -95,6 +97,7 @@ import { RoleEditorComponent } from "./components/controls/role-editor.component
     declarations: [
         AppComponent,
         LoginComponent,
+        RegisterComponent,
         HomeComponent,
         CustomersComponent,
         ProductsComponent,
@@ -114,7 +117,8 @@ import { RoleEditorComponent } from "./components/controls/role-editor.component
         BootstrapToggleDirective,
         BootstrapSelectDirective,
         BootstrapDatepickerDirective,
-        GroupByPipe
+        GroupByPipe,
+        SocialLoginComponent
     ],
     providers: [
         { provide: 'BASE_URL', useFactory: getBaseUrl },

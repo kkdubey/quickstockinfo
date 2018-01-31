@@ -1,12 +1,7 @@
 ﻿@import './assets/styles/ngx-datatable.css';
 @import './assets/styles/alertify.core.css';
 @import './assets/styles/alertify.bootstrap.css';
-
-.navbar .nav li a:hover,
-.navbar.nav li.toolbaritem a:hover,
-.nav.nav-tabsNOTUSE li a:hover {
-    color: #E03930;
-}
+@import url('../../node_modules/bootstrap-social/bootstrap-social.css');
 
 .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
     background-color: #efefef;

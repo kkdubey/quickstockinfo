@@ -1,9 +1,9 @@
 // ======================================
-// Author: Ebenezer Monney
-// Email:  info@ebenmonney.com
-// Copyright (c) 2017 www.ebenmonney.com
+// Author: Komal Dubey
+// Email:  kkdubey12@gmail.com
 // 
-// ==> Gun4Hire: contact@ebenmonney.com
+// 
+
 // ======================================
 
 import { Injectable, Injector } from '@angular/core';
@@ -19,6 +19,7 @@ import { ConfigurationService } from './configuration.service';
 export class AccountEndpoint extends EndpointFactory {
 
     private readonly _usersUrl: string = "/api/account/users";
+    private readonly _selfuserregistrerUrl: string = "/api/account/selfuserregistrer"; 
     private readonly _userByUserNameUrl: string = "/api/account/users/username";
     private readonly _currentUserUrl: string = "/api/account/users/me";
     private readonly _currentUserPreferencesUrl: string = "/api/account/users/me/preferences";
@@ -28,6 +29,7 @@ export class AccountEndpoint extends EndpointFactory {
     private readonly _permissionsUrl: string = "/api/account/permissions";
 
     get usersUrl() { return this.configurations.baseUrl + this._usersUrl; }
+    get selfuserregistrerUrl() { return this.configurations.baseUrl + this._selfuserregistrerUrl; }
     get userByUserNameUrl() { return this.configurations.baseUrl + this._userByUserNameUrl; }
     get currentUserUrl() { return this.configurations.baseUrl + this._currentUserUrl; }
     get currentUserPreferencesUrl() { return this.configurations.baseUrl + this._currentUserPreferencesUrl; }
@@ -55,7 +57,7 @@ export class AccountEndpoint extends EndpointFactory {
             });
     }
 
-
+    
     getUserByUserNameEndpoint<T>(userName: string): Observable<T> {
         let endpointUrl = `${this.userByUserNameUrl}/${userName}`;
 
@@ -79,6 +81,14 @@ export class AccountEndpoint extends EndpointFactory {
     getNewUserEndpoint<T>(userObject: any): Observable<T> {
 
         return this.http.post<T>(this.usersUrl, JSON.stringify(userObject), this.getRequestHeaders())
+            .catch(error => {
+                return this.handleError(error, () => this.getNewUserEndpoint(userObject));
+            });
+    }
+
+    getSelfUserRegisterEndpoint<T>(userObject: any): Observable<T> {
+
+        return this.http.post<T>(this.selfuserregistrerUrl, JSON.stringify(userObject), this.getRequestHeaders())
             .catch(error => {
                 return this.handleError(error, () => this.getNewUserEndpoint(userObject));
             });

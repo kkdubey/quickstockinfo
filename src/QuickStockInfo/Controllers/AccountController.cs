@@ -1,9 +1,9 @@
 ﻿// ======================================
-// Author: Ebenezer Monney
-// Email:  info@ebenmonney.com
-// Copyright (c) 2017 www.ebenmonney.com
+// Author: Komal Dubey
+// Email:  kkdubey12@gmail.com
 // 
-// ==> Gun4Hire: contact@ebenmonney.com
+// 
+
 // ======================================
 
 using System;
@@ -253,6 +253,37 @@ namespace QuickStockInfo.Controllers
             if (!(await _authorizationService.AuthorizeAsync(this.User, Tuple.Create(user.Roles, new string[] { }), Authorization.Policies.AssignAllowedRolesPolicy)).Succeeded)
                 return new ChallengeResult();
 
+
+            if (ModelState.IsValid)
+            {
+                if (user == null)
+                    return BadRequest($"{nameof(user)} cannot be null");
+
+
+                ApplicationUser appUser = Mapper.Map<ApplicationUser>(user);
+
+                var result = await _accountManager.CreateUserAsync(appUser, user.Roles, user.NewPassword);
+                if (result.Item1)
+                {
+                    UserViewModel userVM = await GetUserViewModelHelper(appUser.Id);
+                    return CreatedAtAction(GetUserByIdActionName, new { id = userVM.Id }, userVM);
+                }
+
+                AddErrors(result.Item2);
+            }
+
+            return BadRequest(ModelState);
+        }
+
+
+
+        [HttpPost("selfuserregistrer")]
+        [AllowAnonymous]
+        public async Task<IActionResult> SelfUserRegister([FromBody] UserEditViewModel user)
+        {
+            if (!(await _authorizationService.AuthorizeAsync(this.User, Tuple.Create(user.Roles, new string[] { }), Authorization.Policies.AssignAllowedRolesPolicy)).Succeeded)
+                return new ChallengeResult();
+            user.Roles = new string[] { "user" };
 
             if (ModelState.IsValid)
             {
@@ -559,7 +590,7 @@ namespace QuickStockInfo.Controllers
 
             return null;
         }
-        
+
 
 
         private void AddErrors(IEnumerable<string> errors)

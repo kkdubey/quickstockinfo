@@ -1,9 +1,9 @@
 ﻿// ======================================
-// Author: Ebenezer Monney
-// Email:  info@ebenmonney.com
-// Copyright (c) 2017 www.ebenmonney.com
+// Author: Komal Dubey
+// Email:  kkdubey12@gmail.com
 // 
-// ==> Gun4Hire: contact@ebenmonney.com
+// 
+
 // ======================================
 
 import { Component, ViewEncapsulation, OnInit, OnDestroy, ViewChildren, AfterViewInit, QueryList, ElementRef } from "@angular/core";
@@ -38,7 +38,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     shouldShowLoginModal: boolean;
     removePrebootScreen: boolean;
     newNotificationCount = 0;
-    appTitle = "Quick Application";
+    appTitle = "Quick Stock Info";
     appLogo = require("../assets/images/logo.png");
 
     stickyToasties: number[] = [];
