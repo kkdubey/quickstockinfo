@@ -1,19 +1,7 @@
-# **QuickStockInfo** - ASPNET Core 2.0 / Angular 5 startup project template
-[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/emonney/QuickStockInfo/blob/master/LICENSE)
+# **QuickStockInfo** - ASPNET Core 2.0 / Angular 5 startup project 
 
 A startup **Angular 5 / ASP.NET Core 2.0** (cross-platform ) **project template** with an end-to-end login, user and role management implementation.
 As well as other common functionalities for **Quick Application Development**.
-
-[FOLLOW ME](https://twitter.com/kommand) on twitter for important updates
-
-###### NOTE: Please post support related topics in the [help & support forum](https://www.ebenmonney.com/forum/?view=forum&id=14). For bug reports open an [issue on github](https://github.com/emonney/QuickStockInfo/issues). 
-
-For the older asp.net core 1.x version: [Download](https://github.com/emonney/QuickStockInfo-VSIX/releases/tag/v1.5")
-
-[live demo](http://QuickStockInfo.ebenmonney.com) / [downloadable demo](https://github.com/emonney/tempa/raw/master/QuickStockInfo-PublishOutput.zip)
-
-[![QuickStockInfo Demo](https://github.com/emonney/QuickStockInfo/blob/9b122b7f3c38121699d3ec41b700474e192abe37/QuickStockInfo.gif?raw=true)](https://www.youtube.com/watch?v=Wuh7NIZ96jA)
-
 ___
 #### INTRODUCING QuickStockInfo PRO
 *   All standard/free features
@@ -21,11 +9,6 @@ ___
 *   Angular CLI
 *   Angular Material
 *   Dedicated Email Support
-
-[Get PRO Version](https://www.ebenmonney.com/product/QuickStockInfo-pro) | [Live Demo](http://QuickStockInfo-pro.ebenmonney.com/)
-___
-
-
 
 ## This application consists of:
 
@@ -59,31 +42,9 @@ ___
 
 ## Installation
 
-*   [OPTION 1] Clone the [Git Repository](https://github.com/emonney/QuickStockInfo.git) and edit with your favorite editor. e.g. Visual Studio, Visual Studio Code
+*   [OPTION 1] Clone the [Git Repository](https://github.com/kkdubey12/QuickStockInfo.git) and edit with your favorite editor. e.g. Visual Studio, Visual Studio Code
 *   [OPTION 2] Install Project template from the [Visual Studio Gallery](https://marketplace.visualstudio.com/items?itemName=adentum.QuickStockInfo-ASPNETCoreAngularXProjectTemplate) and follow the usual File -> New Project -> Web -> QuickStockInfo - to create a new Project from this template.
     Lunch with `F5` or `Ctrl+F5` (The usual way)
-
-
-## Installation Notes
-
-*   When creating a new project please wait for all dependencies ("dotnet restore" & "npm install") to be restored.  
-    When using VisualStudio this is automatic, check the output window or status bar to know that the package/dependencies restore process is complete before launching your program for the first time.
-*   If you get this error: Unable to resolve 'OpenIddict', do the below steps to add myget.org to nuget package sources;  
-    Copy the "NuGet.config" from the project folder to the solution's folder (i.e. copy to the same folder location as your solutions file) and restart your IDE  
-    OR  
-    Add myget.org to your package sources in VisualStudio.  
-    Visual Studio -> Tools -> Options -> NuGet Package Manager -> Package Sources, Add "aspnet-contrib", this URL "https://www.myget.org/F/aspnet-contrib/api/v3/index.json"
-*   If you get any other errors, consider running manually the steps to build the project and note where the errors occur.  
-    Open command prompt and do the below steps:  
-    1. run 'dotnet restore' from the two project folders - Restore nuget packages  
-    2. run 'npm install' from the project with package.json - Restore npm packages  
-    3. run 'npm run dev-build' from the project with package.json - Build webpack vendor packages  
-    4. Try running the application again - Test to make sure it all works  
-    
-    *When I say "run from the project folder" I mean run the commands on the command line from those folders  
-    If any step fails, post the error details on the [support forum](https://www.ebenmonney.com/forum/?view=forum&id=14) for the needed assistance.
-*   For help and support post in the [support forum](https://www.ebenmonney.com/forum/?view=forum&id=14). For bug reports open an [issue on github](https://github.com/emonney/QuickStockInfo/issues)
-
 
 ## Login
 
@@ -100,27 +61,7 @@ LOGIN WITH USERNAME OR EMAIL ADDRESS
 
 ## Documentation
 
-*   [Overview of QuickStockInfo](https://www.ebenmonney.com/QuickStockInfo)
 *   [Conceptual overview of what is ASP.NET Core](https://go.microsoft.com/fwlink/?LinkId=518008)
 *   [Angular5 documentation overview](http://angular.io/docs/ts/latest/guide)
 *   [Working with Data](https://go.microsoft.com/fwlink/?LinkId=398602)
 *   [An introduction to webpack](https://webpack.js.org/guides/get-started/)
-
-
-## Contribution
-
-QuickStockInfo is actively maintained by [Ebenezer Monney](https://github.com/emonney) on [GitHub](https://github.com/emonney/QuickStockInfo). You can support it by
-*   Submitting your changes/improvements/features using pull requests
-*   Suggesting ideas or areas of improvements
-*   Encouraging the developers by rating it/starring it
-*   Linking to it and recommending it to others
-*   [Making a donation](https://www.paypal.me/emonney)
-
-
-## License
-
-Released under the [MIT License](https://github.com/emonney/QuickStockInfo/blob/master/LICENSE).
-
-[YOUR FEEDBACK](mailto:contact@ebenmonney.com) | [FOLLOW ME](https://twitter.com/kommand)
-
-### _**If you found this template useful, please take a minute to [rate it](https://marketplace.visualstudio.com/items?itemName=adentum.QuickStockInfo-ASPNETCoreAngularXProjectTemplate#review-details). Appreciated!**_
